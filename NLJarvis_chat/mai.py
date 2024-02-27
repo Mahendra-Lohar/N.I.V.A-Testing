@@ -7,8 +7,8 @@ import smtplib
 EMAIL_CONFIG = {
     'smtp_server': 'smtp.gmail.com',
     'smtp_port': 587,
-    'smtp_username': 'niva.ai002@gmail.com',
-    'smtp_password': 'kjhf dzxm cbne lcjy',
+    'smtp_username': 'your email',
+    'smtp_password': 'your password',
 }
 
 def recognize_speech():
@@ -32,7 +32,7 @@ def send_email(subject, body, to_email):
     server = smtplib.SMTP('smtp.gmail.com',587)
     server.ehlo()
     server.starttls()
-    server.login("niva.ai002@gmail.com","kjhf dzxm cbne lcjy")
+    server.login("your email","your password")
     # server.sendmail("YOUR_MAIL_ID",to,content)
     # server.close()
     # server = smtplib.SMTP(EMAIL_CONFIG['smtp_server'], EMAIL_CONFIG['smtp_port'])
@@ -44,7 +44,7 @@ def send_email(subject, body, to_email):
 
     # Send the email
     # server.sendmail(EMAIL_CONFIG['smtp_username'], to_email, message)
-    server.sendmail("niva.ai002@gmail.com", to_email, message)
+    server.sendmail("your email", to_email, message)
     # Close the connection
     server.quit()
 
@@ -58,7 +58,7 @@ def main():
     body = recognize_speech()
 
     print("To whom should I send the email?")
-    to_email = "swayam.mane1014@gmail.com"
+    to_email = "recipient mail"
 
     send_email(subject, body, to_email)
     print("Email sent successfully.")
@@ -67,8 +67,7 @@ if __name__ == "__main__":
     main()
 
 
-#niva.ai002@gmail.com
-#JarviS#1999
+
 
 
 # import smtplib
@@ -84,8 +83,7 @@ if __name__ == "__main__":
 #     # SMTP server configuration (for Gmail)
 #     smtp_server = 'smtp.gmail.com'
 #     smtp_port = 587
-#     smtp_username = 'niva.ai002@gmail.com'
-#     smtp_password = 'kjhf dzxm cbne lcjy'
+
 
 #     # Create the email message
 #     # message = MIMEText(body)
